@@ -12,216 +12,254 @@
     body {
       margin: 0;
       min-height: 100vh;
-      background: #e9e9e9;
-      color: #111;
+      background: #f3f4f6;
+      color: #222;
       font-family:
+        -apple-system,
+        BlinkMacSystemFont,
         "Hiragino Kaku Gothic ProN",
         "Yu Gothic",
         "Noto Sans JP",
-        system-ui,
         sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      padding: 24px 12px;
+      padding: 20px 10px;
     }
 
-    .log-wrapper {
+    .page {
       width: 100%;
-      max-width: 460px;
-      background: #f8f8f8;
-      border: 1px solid #9c9c9c;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+      max-width: 520px;
+      margin: 0 auto;
+      background: #ffffff;
+      border: 1px solid #d1d5db;
     }
 
-    .top-bar {
-      background: #111;
-      color: #f2f2f2;
+    .header {
       padding: 12px 14px;
-      border-bottom: 3px solid #555;
+      border-bottom: 1px solid #d1d5db;
+      background: #fafafa;
     }
 
-    .top-title {
-      font-size: 15px;
+    .title {
+      font-size: 16px;
       font-weight: 700;
-      letter-spacing: 0.08em;
+      margin: 0 0 6px;
     }
 
-    .top-meta {
-      margin-top: 6px;
-      display: flex;
-      justify-content: space-between;
-      gap: 8px;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-      font-size: 10px;
-      color: #bdbdbd;
-      letter-spacing: 0.04em;
-    }
-
-    .system-info {
-      padding: 10px 14px;
-      background: #efefef;
-      border-bottom: 1px solid #c9c9c9;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-      font-size: 11px;
-      color: #444;
-      line-height: 1.6;
-    }
-
-    .stamp {
-      display: inline-block;
-      margin-top: 6px;
-      padding: 2px 7px;
-      border: 1px solid #444;
-      color: #222;
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-    }
-
-    .log-body {
-      padding: 10px 12px 14px;
-      background: #fff;
-    }
-
-    .entry {
-      padding: 10px 0;
-      border-bottom: 1px solid #d6d6d6;
-    }
-
-    .entry:last-child {
-      border-bottom: none;
-    }
-
-    .time {
-      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-      font-size: 11px;
-      color: #666;
-      margin-bottom: 4px;
-    }
-
-    .speaker {
-      font-size: 13px;
-      font-weight: 700;
-      color: #111;
-      margin-bottom: 3px;
-    }
-
-    .message {
-      font-size: 15px;
-      line-height: 1.65;
-      color: #111;
-      padding-left: 8px;
-      border-left: 3px solid #a9a9a9;
-      white-space: normal;
-    }
-
-    .message.critical {
-      border-left-color: #222;
-      font-weight: 700;
-    }
-
-    .footer {
-      padding: 9px 14px;
-      background: #f1f1f1;
-      border-top: 1px solid #c6c6c6;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-      font-size: 10px;
+    .sub {
+      font-size: 12px;
       color: #666;
       line-height: 1.5;
     }
 
-    .redacted {
-      background: #111;
+    .label-row {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+
+    .label {
+      font-size: 10px;
+      color: #444;
+      border: 1px solid #c5c5c5;
+      background: #f1f1f1;
+      padding: 2px 6px;
+      border-radius: 2px;
+      letter-spacing: 0.04em;
+    }
+
+    .meta {
+      padding: 10px 14px;
+      background: #f8f8f8;
+      border-bottom: 1px solid #e0e0e0;
+      font-size: 12px;
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .log-list {
+      padding: 4px 0;
+    }
+
+    .log-item {
+      padding: 12px 14px;
+      border-bottom: 1px solid #e5e7eb;
+      position: relative;
+    }
+
+    .log-item:last-child {
+      border-bottom: none;
+    }
+
+    .log-item.koichiro {
+      background: #ffffff;
+      border-left: 4px solid #2f2f2f;
+      padding-left: 12px;
+    }
+
+    .log-item.renji {
+      background: #fafafa;
+      border-left: 4px solid #b7b7b7;
+      padding-left: 12px;
+    }
+
+    .time {
+      font-size: 12px;
+      color: #777;
+      margin-bottom: 5px;
+      font-family: Arial, sans-serif;
+    }
+
+    .name {
+      font-size: 13px;
+      margin-bottom: 4px;
+    }
+
+    .koichiro .name {
+      font-weight: 800;
       color: #111;
-      padding: 0 5px;
-      margin: 0 2px;
+      letter-spacing: 0.03em;
+    }
+
+    .renji .name {
+      font-weight: 500;
+      color: #555;
+      letter-spacing: 0.01em;
+    }
+
+    .text {
+      font-size: 15px;
+      line-height: 1.65;
+      color: #111;
+    }
+
+    .koichiro .text {
+      font-weight: 700;
+    }
+
+    .renji .text {
+      font-weight: 400;
+      color: #333;
+    }
+
+    .role {
+      display: inline-block;
+      margin-left: 6px;
+      font-size: 10px;
+      font-weight: 400;
+      color: #777;
+      border: 1px solid #d0d0d0;
+      padding: 1px 5px;
+      border-radius: 2px;
+      vertical-align: 1px;
+    }
+
+    .koichiro .role {
+      color: #333;
+      border-color: #999;
+      background: #eeeeee;
+    }
+
+    .renji .role {
+      color: #777;
+      background: #f7f7f7;
+    }
+
+    .footer {
+      padding: 10px 14px;
+      background: #fafafa;
+      border-top: 1px solid #d1d5db;
+      font-size: 11px;
+      color: #777;
+      line-height: 1.6;
     }
 
     @media (max-width: 480px) {
       body {
-        padding: 14px 8px;
+        padding: 12px 8px;
       }
 
-      .log-wrapper {
-        max-width: 100%;
-      }
-
-      .message {
+      .title {
         font-size: 15px;
       }
 
-      .top-title {
-        font-size: 14px;
+      .text {
+        font-size: 15px;
       }
     }
   </style>
 </head>
 <body>
-  <main class="log-wrapper">
-    <header class="top-bar">
-      <div class="top-title">内部連絡ログ / 抽出</div>
-      <div class="top-meta">
-        <span>ACCESS LOG</span>
-        <span>CONFIDENTIAL</span>
+  <main class="page">
+    <header class="header">
+      <h1 class="title">内部連絡ログ / 抽出</h1>
+      <div class="sub">
+        Internal Message Archive Export<br />
+        対象期間：2026/04/17 22:40 - 22:46
+      </div>
+
+      <div class="label-row">
+        <span class="label">CONFIDENTIAL</span>
+        <span class="label">ACCESS LOG</span>
+        <span class="label">PARTIAL EXPORT</span>
       </div>
     </header>
 
-    <section class="system-info">
-      SOURCE: internal communication archive<br />
-      EXPORT ID: JM-0417-KR-221<br />
-      VIEW LEVEL: restricted / administrator only<br />
-      CASE REF: ASAKURA_MIO / incident control
-      <br />
-      <span class="stamp">CONFIDENTIAL</span>
+    <section class="meta">
+      管理番号：IM-20260417-221<br />
+      抽出対象：黒崎恒一郎 / 黒崎蓮司<br />
+      閲覧区分：管理者権限
     </section>
 
-    <section class="log-body">
-      <div class="entry">
+    <section class="log-list">
+      <div class="log-item koichiro">
         <div class="time">2026/04/17 22:41</div>
-        <div class="speaker">黒崎恒一郎：</div>
-        <div class="message critical">
-          朝倉澪の件、今日中に止めろ。
+        <div class="name">
+          黒崎恒一郎
+          <span class="role">ADMIN</span>
         </div>
+        <div class="text">朝倉澪の件、今日中に止めろ。</div>
       </div>
 
-      <div class="entry">
+      <div class="log-item renji">
         <div class="time">2026/04/17 22:42</div>
-        <div class="speaker">黒崎蓮司：</div>
-        <div class="message">
-          どこまで。
+        <div class="name">
+          黒崎蓮司
+          <span class="role">USER</span>
         </div>
+        <div class="text">どこまで。</div>
       </div>
 
-      <div class="entry">
+      <div class="log-item koichiro">
         <div class="time">2026/04/17 22:43</div>
-        <div class="speaker">黒崎恒一郎：</div>
-        <div class="message critical">
-          病院送りでいい。
+        <div class="name">
+          黒崎恒一郎
+          <span class="role">ADMIN</span>
         </div>
+        <div class="text">病院送りでいい。</div>
       </div>
 
-      <div class="entry">
+      <div class="log-item koichiro">
         <div class="time">2026/04/17 22:44</div>
-        <div class="speaker">黒崎恒一郎：</div>
-        <div class="message">
-          階段付近のカメラは、こちらで止める。
+        <div class="name">
+          黒崎恒一郎
+          <span class="role">ADMIN</span>
         </div>
+        <div class="text">階段付近のカメラは、こちらで止める。</div>
       </div>
 
-      <div class="entry">
+      <div class="log-item koichiro">
         <div class="time">2026/04/17 22:45</div>
-        <div class="speaker">黒崎恒一郎：</div>
-        <div class="message critical">
-          事故に見えるようにしろ。
+        <div class="name">
+          黒崎恒一郎
+          <span class="role">ADMIN</span>
         </div>
+        <div class="text">事故に見えるようにしろ。</div>
       </div>
     </section>
 
     <footer class="footer">
-      LOG STATUS: extracted / partial archive<br />
-      OPERATOR: <span class="redacted">0000</span><br />
-      NOTE: unauthorized disclosure prohibited
+      Exported from internal communication archive.<br />
+      This log is for administrative review only.
     </footer>
   </main>
 </body>
