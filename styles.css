@@ -369,3 +369,8 @@ body::before {
     font-size: 11px;
   }
 }
+.file-card[data-hovered="true"] {
+  transform: translateY(-1px);
+  border-color: rgba(111, 163, 162, 0.55);
+  box-shadow: 0 0 22px rgba(111, 163, 162, 0.14), 0 16px 42px rgba(0,0,0,0.3);
+}
