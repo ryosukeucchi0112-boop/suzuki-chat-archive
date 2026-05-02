@@ -6,8 +6,71 @@
   <title>cache restored</title>
   <meta name="description" content="restored local cache" />
   <link rel="stylesheet" href="./styles.css" />
+  <style>
+    /* ── Fiction notice fixed banner ── */
+    #fiction-banner {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 9999;
+      background: rgba(10, 10, 10, 0.92);
+      border-bottom: 1px solid rgba(255, 220, 60, 0.55);
+      color: rgba(255, 220, 60, 0.9);
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 6px 16px;
+      pointer-events: none;
+      user-select: none;
+    }
+    #fiction-banner span {
+      opacity: 0.55;
+      margin: 0 12px;
+    }
+
+    /* push body content below fixed banner */
+    body { padding-top: 32px; }
+
+    /* ── Inline disclaimer above attachments ── */
+    .attachment-disclaimer {
+      margin: 8px 16px 4px;
+      padding: 5px 10px;
+      border-left: 2px solid rgba(255, 90, 90, 0.45);
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 10px;
+      color: rgba(255, 90, 90, 0.7);
+      letter-spacing: 0.08em;
+      line-height: 1.5;
+    }
+
+    /* ── Footer disclaimer ── */
+    #fiction-footer {
+      margin: 40px 16px 24px;
+      padding: 12px 16px;
+      border: 1px solid rgba(180, 180, 180, 0.15);
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 10px;
+      color: rgba(180, 180, 180, 0.5);
+      letter-spacing: 0.07em;
+      line-height: 1.7;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
+
+  <!-- ① 固定帯バナー（P0追加） -->
+  <div id="fiction-banner">
+    ⚠ fictional reconstructed chat archive
+    <span>|</span>
+    すべての記録・人物・組織名はフィクションです
+    <span>|</span>
+    this is a work of fiction
+  </div>
+
   <div id="boot" class="boot-screen">
     <div class="boot-text">connection restored</div>
   </div>
@@ -29,12 +92,316 @@
 
       <div class="msg left">
         <div class="name">SUZUKI</div>
-        <div class="bubble">なぜ、城南記念総合病院を調べてる？</div>
+        <!-- 病院名：部分伏字 -->
+        <div class="bubble">なぜ、城南記念●合病院を調べてる？</div>
         <div class="time">02:11</div>
       </div>
 
       <div class="msg right">
         <div class="name">澪</div>
+        <div class="bubble">誰ですか。幼馴染が、あそこで死んだからです。</div>
+        <div class="time">02:13</div>
+      </div>
+
+      <div class="msg left">
+        <div class="name">SUZUKI</div>
+        <!-- 氏名：部分伏字 -->
+        <div class="bubble">成瀬●か？</div>
+        <div class="time">02:14</div>
+      </div>
+
+      <div class="msg right">
+        <div class="name">澪</div>
+        <div class="bubble">なんで知ってるの。</div>
+        <div class="time">02:14</div>
+      </div>
+
+      <div class="msg left">
+        <div class="name">SUZUKI</div>
+        <div class="bubble">これを見ろ。</div>
+        <div class="time">02:15</div>
+      </div>
+
+      <div class="system-fragment">-- attachment recovered ---</div>
+
+      <!-- ② 添付直上：免責文 -->
+      <div class="attachment-disclaimer">
+        ⚠ fictional file / このファイル名および内容は創作上の演出です。実在の診療記録ではありません。
+      </div>
+
+      <div class="file-card important">
+        <div class="file-label">FILE RESTORED</div>
+        <!-- ③ ファイル名変更 -->
+        <div class="file-name">story_file_A.jpg</div>
+        <div class="file-meta">evidence 01 / file size: 1.8 MB</div>
+        <div class="file-actions">
+          <a href="./naruse-record.html.png" target="_blank" rel="noopener noreferrer">open</a>
+          <a href="./naruse-record.html.png" download>download</a>
+        </div>
+      </div>
+
+      <div class="msg right">
+        <div class="name">澪</div>
+        <div class="bubble">え、何これ……●●の記録？</div>
+        <div class="time">02:18</div>
+      </div>
+
+      <div class="msg left">
+        <div class="name">SUZUKI</div>
+        <!-- 人名：部分伏字 -->
+        <div class="bubble">まだ●●には流すな。黒崎を絶対に潰す。</div>
+        <div class="time">02:20</div>
+      </div>
+
+      <div class="date-tag">2026.03.04</div>
+
+      <div class="msg right">
+        <div class="name">澪</div>
+        <!-- 人名：部分伏字 -->
+        <div class="bubble">黒崎●●って同級生が、最近私のことを気にしてるらしいの。</div>
+        <div class="time">21:06</div>
+      </div>
+
+      <div class="msg left">
+        <div class="name">SUZUKI</div>
+        <div class="bubble">あいつには近づくな。黒崎●●郎の甥だ。</div>
+        <div class="time">21:07</div>
+      </div>
+
+      <div class="msg right">
+        <div class="name">澪</div>
+        <div class="bubble">黒崎って、病院の人ですよね。なんで学校の人間まで繋がってるの。</div>
+        <div class="time">21:08</div>
+      </div>
+
+      <div class="msg left">
+        <div class="name">SUZUKI</div>
+        <div class="bubble">甥の方も、病院の悪行に関わってる。</div>
+        <div class="time">21:09</div>
+      </div>
+
+      <div class="msg right">
+        <div class="name">澪</div>
+        <div class="bubble">じゃあ、私が調べてることも知られてる？</div>
+        <div class="time">21:10</div>
+      </div>
+
+      <div class="msg left">
+        <div class="name">SUZUKI</div>
+        <div class="bubble">その可能性は高い。</div>
+        <div class="time">21:11</div>
+      </div>
+
+      <div class="date-tag">2026.03.21</div>
+
+      <div class="msg left">
+        <div class="name">SUZUKI</div>
+        <div class="bubble">内部のlogを見つけた。これがあれば、強行手段に出られる。</div>
+        <div class="time">00:44</div>
+      </div>
+
+      <div class="system-fragment">-- attachment recovered ---</div>
+
+      <!-- ② 添付直上：免責文 -->
+      <div class="attachment-disclaimer">
+        ⚠ fictional file / このファイル名および内容は創作上の演出です。実在の内部ログではありません。
+      </div>
+
+      <div class="file-card important">
+        <div class="file-label">FILE RESTORED</div>
+        <!-- ③ ファイル名変更 -->
+        <div class="file-name">archive_log_01.txt</div>
+        <div class="file-meta">evidence 02 / file size: 2.4 MB</div>
+        <div class="file-actions">
+          <a href="./hospital-admin-log.html" target="_blank" rel="noopener noreferrer">open</a>
+          <a href="./hospital-admin-log.html" download>download</a>
+        </div>
+      </div>
+
+      <div class="msg right">
+        <div class="name">澪</div>
+        <div class="bubble">強行手段って、何するつもりですか。</div>
+        <div class="time">00:47</div>
+      </div>
+
+      <div class="msg left">
+        <div class="name">SUZUKI</div>
+        <div class="bubble">黒崎を表に引きずり出す。</div>
+        <div class="time">00:48</div>
+      </div>
+
+      <div class="msg right">
+        <div class="name">澪</div>
+        <!-- 警察ワード：部分伏字 -->
+        <div class="bubble">●●に出せばいいんじゃないんですか。</div>
+        <div class="time">00:49</div>
+      </div>
+
+      <div class="msg left">
+        <div class="name">SUZUKI</div>
+        <!-- 警察ワード：部分伏字 -->
+        <div class="bubble">●●にも黒崎の影響が強いはずだ。下手に通報したら揉み消される。</div>
+        <div class="time">00:50</div>
+      </div>
+
+      <div class="msg right">
+        <div class="name">澪</div>
+        <div class="bubble">じゃあ、誰に言えばいいの。</div>
+        <div class="time">00:51</div>
+      </div>
+
+      <div class="msg left">
+        <div class="name">SUZUKI</div>
+        <div class="bubble">信頼できる者を探しておく。</div>
+        <div class="time">00:52</div>
+      </div>
+
+      <div class="date-tag">2026.04.17</div>
+
+      <div class="msg left">
+        <div class="name">SUZUKI</div>
+        <!-- 人名：部分伏字 -->
+        <div class="bubble">黒崎●●郎から●●へのlogを取った。</div>
+        <div class="time">17:41</div>
+      </div>
+
+      <div class="system-fragment">-- attachment recovered ---</div>
+
+      <!-- ② 添付直上：免責文 -->
+      <div class="attachment-disclaimer">
+        ⚠ fictional file / このファイル名および内容は創作上の演出です。実在のチャット履歴ではありません。
+      </div>
+
+      <div class="file-card important">
+        <div class="file-label">FILE RESTORED</div>
+        <!-- ③ ファイル名変更 -->
+        <div class="file-name">archive_log_02.txt</div>
+        <div class="file-meta">evidence 03 / file size: 846 KB</div>
+        <div class="file-actions">
+          <a href="./renji-chat.html" target="_blank" rel="noopener noreferrer">open</a>
+          <a href="./renji-chat.html" download>download</a>
+        </div>
+      </div>
+
+      <div class="msg right">
+        <div class="name">澪</div>
+        <div class="bubble">●●って、あの●●ですよね。</div>
+        <div class="time">17:46</div>
+      </div>
+
+      <div class="msg left">
+        <div class="name">SUZUKI</div>
+        <div class="bubble">読め。</div>
+        <div class="time">17:47</div>
+      </div>
+
+      <div class="msg right">
+        <div class="name">澪</div>
+        <div class="bubble">「今日中に止めろ」って、これ私のこと？</div>
+        <div class="time">17:49</div>
+      </div>
+
+      <div class="msg right">
+        <div class="name">澪</div>
+        <div class="bubble">待って。今、階段の近くにいる。</div>
+        <div class="time">17:50</div>
+      </div>
+
+      <div class="msg left">
+        <div class="name">SUZUKI</div>
+        <div class="bubble">そこから離れろ。</div>
+        <div class="time">17:51</div>
+      </div>
+
+      <div class="msg right">
+        <div class="name">澪</div>
+        <div class="bubble">●●がいる。</div>
+        <div class="time">17:51</div>
+      </div>
+
+      <div class="msg left">
+        <div class="name">SUZUKI</div>
+        <div class="bubble">早く逃げろ。</div>
+        <div class="time">17:51</div>
+      </div>
+
+      <div class="msg right">
+        <div class="name">澪</div>
+        <div class="bubble">ごめん。</div>
+        <div class="time">17:52</div>
+      </div>
+
+      <div class="msg left">
+        <div class="name">SUZUKI</div>
+        <div class="bubble">おい。</div>
+        <div class="time">17:52</div>
+      </div>
+
+      <div class="msg left">
+        <div class="name">SUZUKI</div>
+        <div class="bubble">返事しろ。</div>
+        <div class="time">17:53</div>
+      </div>
+
+      <div class="msg left">
+        <div class="name">SUZUKI</div>
+        <div class="bubble">返事しろ。</div>
+        <div class="time">17:53</div>
+      </div>
+
+      <div class="date-tag">2026.04.18</div>
+
+      <div class="system-fragment">-- restored from local cache ---</div>
+
+      <!-- ② 添付直上：免責文（2点まとめて） -->
+      <div class="attachment-disclaimer">
+        ⚠ fictional files / 以下のファイル名および内容は創作上の演出です。実在の警察提出資料・診療記録ではありません。
+      </div>
+
+      <div class="file-card important">
+        <div class="file-label">FILE RESTORED</div>
+        <!-- ③ ファイル名変更 -->
+        <div class="file-name">archive_log_03.png</div>
+        <div class="file-meta">evidence 04 / file size: 12 KB</div>
+        <div class="file-actions">
+          <a href="./aizawa-note.png" target="_blank" rel="noopener noreferrer">open</a>
+          <a href="./aizawa-note.png" download>download</a>
+        </div>
+      </div>
+
+      <div class="file-card final">
+        <div class="file-label">FILE RESTORED</div>
+        <div class="file-name">report-form.html</div>
+        <div class="file-meta">file size: 31 KB</div>
+        <div class="file-actions">
+          <a href="https://bordover.netlify.app" target="_blank" rel="noopener noreferrer">open</a>
+          <a href="https://bordover.netlify.app" download>download</a>
+        </div>
+      </div>
+
+      <div class="msg left last">
+        <div class="name">SUZUKI</div>
+        <div class="bubble mono">もう俺は動けない。誰か。</div>
+        <div class="time">--:--</div>
+      </div>
+
+      <div class="signature">by SUZUKI</div>
+
+    </section>
+  </main>
+
+  <!-- ④ フッター免責文 -->
+  <footer id="fiction-footer">
+    このログ画面および添付ファイル名は、すべて創作作品上の演出です。<br>
+    実在の診療記録、内部ログ、警察提出資料、チャット履歴ではありません。<br>
+    <br>
+    This chat log and all attached file names are fictional reconstructions created solely for narrative purposes.<br>
+    They do not represent any real medical records, internal logs, law enforcement documents, or personal communications.
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>        <div class="name">澪</div>
         <div class="bubble">誰ですか。幼馴染が、あそこで死んだからです。</div>
         <div class="time">02:13</div>
       </div>
@@ -275,15 +642,14 @@
         </div>
       </div>
 
-      <div class="file-card final">
-        <div class="file-label">FILE RESTORED</div>
-        <div class="file-name">report-form.html</div>
-        <div class="file-meta">file size: 31 KB</div>
-        <div class="file-actions">
-          <a href="https://bordover.netlify.app" target="_blank" rel="noopener noreferrer">open</a>
-          <a href="https://bordover.netlify.app"  download>download</a>
-        </div>
-      </div>
+     <div class="file-card final">
+  <div class="file-label">FILE RESTORED</div>
+<div class="file-name">fictional_report_gate.html</div>
+  <div class="file-meta">file size: 31 KB</div>
+  <div class="file-actions">
+    <a href="https://bordover.netlify.app" target="_blank" rel="noopener noreferrer">open</a>
+  </div>
+</div>
 
       <div class="msg left last">
         <div class="name">SUZUKI</div>
