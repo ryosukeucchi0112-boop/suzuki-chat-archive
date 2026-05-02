@@ -6,6 +6,10 @@
   <title>restricted_admin_log_0117.html</title>
   <style>
     :root {
+      --fiction-header-bg: #eceff1;
+      --fiction-header-text: #6b7280;
+      --fiction-header-border: #d1d5db;
+
       --bg: #e9eaec;
       --card: #fdfdfd;
       --text: #171717;
@@ -23,6 +27,7 @@
 
     body {
       margin: 0;
+      padding-top: 34px;
       background:
         linear-gradient(rgba(255,255,255,0.35), rgba(255,255,255,0.35)),
         var(--bg);
@@ -30,6 +35,27 @@
       font-family: "Courier New", "Yu Gothic", "Hiragino Kaku Gothic ProN", Meiryo, monospace;
       line-height: 1.7;
       letter-spacing: 0.02em;
+    }
+
+    .fiction-fixed-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 9999;
+      width: 100%;
+      height: 34px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 12px;
+      background: var(--fiction-header-bg);
+      border-bottom: 1px solid var(--fiction-header-border);
+      color: var(--fiction-header-text);
+      font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-align: center;
     }
 
     .page {
@@ -249,16 +275,26 @@
       font-size: 11px;
     }
 
-    .footer {
+    .fiction-footer {
       width: min(980px, calc(100% - 28px));
       margin: 14px auto 26px;
       color: #777;
+      font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
       font-size: 11px;
       text-align: center;
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
     @media (max-width: 720px) {
+      body {
+        padding-top: 34px;
+      }
+
+      .fiction-fixed-header {
+        font-size: 10px;
+        padding: 0 8px;
+      }
+
       .page {
         width: min(100% - 18px, 980px);
         margin-top: 18px;
@@ -308,6 +344,13 @@
     @media print {
       body {
         background: #fff;
+        padding-top: 0;
+      }
+
+      .fiction-fixed-header,
+      .top-link,
+      .fiction-footer {
+        display: none;
       }
 
       .page {
@@ -318,22 +361,23 @@
       .document {
         box-shadow: none;
       }
-
-      .top-link {
-        display: none;
-      }
     }
   </style>
 </head>
+
 <body>
+  <div class="fiction-fixed-header">
+    このページは創作作品上の架空UIです。実在の人物・団体・医療機関・事件とは関係ありません。
+  </div>
+
   <main class="page">
     <div class="top-link">
       <a href="./hospital-admin-log.html">open</a>
     </div>
 
-    <section class="document" aria-label="城南記念総合病院 内部管理ログ">
+    <section class="document" aria-label="BORDOVER MEDICAL ARCHIVE 内部管理ログ">
       <header class="header">
-        <div class="hospital">JONAN MEMORIAL HOSPITAL</div>
+        <div class="hospital">BORDOVER MEDICAL ARCHIVE</div>
 
         <div class="subhead">
           <span>ADMIN LOG / Restricted</span>
@@ -350,7 +394,7 @@
           <div class="meta-value">2026-01-17 20:18</div>
 
           <div class="meta-key">閲覧：</div>
-          <div class="meta-value">院長室・管理部・法務</div>
+          <div class="meta-value">管理室・記録部・法務</div>
 
           <div class="meta-key">管理区分：</div>
           <div class="meta-value">Internal Communication Archive / Case-0117</div>
@@ -364,8 +408,9 @@
           <span class="tiny-label">AUDIT LOG</span>
           <span class="tiny-label">NO EXTERNAL COPY</span>
         </div>
+
         <div class="toolbar-right">
-          <span>Session ID: JMH-ADM-0117-1918</span>
+          <span>Session ID: BMA-ADM-0117-1918</span>
           <span>Checksum: <span class="redacted" aria-label="redacted"></span></span>
         </div>
       </div>
@@ -396,13 +441,13 @@
           <div class="message">
             正確な情報が外に出れば、報道は避けられません。<br>
             外来・紹介・学校関連契約も止まります。<br>
-            最悪、病院の存続に関わります。
+            最悪、施設の存続に関わります。
           </div>
         </article>
 
         <article class="log-entry">
           <div class="time">[20:21]</div>
-          <div class="sender">院長室 / 黒崎恒一郎</div>
+          <div class="sender">管理室 / 黒崎恒一郎</div>
           <div class="message">
             だから認めるなと言っています。<br>
             本件は「処置後の予期せぬ急変」で統一してください。
@@ -411,7 +456,7 @@
 
         <article class="log-entry">
           <div class="time">[20:22]</div>
-          <div class="sender">外科部 / 藍沢晋作</div>
+          <div class="sender">処置部 / 藍沢晋作</div>
           <div class="message">
             投与記録を見られた場合、説明できない箇所があります。
           </div>
@@ -419,10 +464,10 @@
 
         <article class="log-entry">
           <div class="time">[20:23]</div>
-          <div class="sender">院長室 / 黒崎恒一郎</div>
+          <div class="sender">管理室 / 黒崎恒一郎</div>
           <div class="message">
             説明できる形に整えてください。<br>
-            事故扱いにした瞬間、病院は終わります。
+            事故扱いにした瞬間、こちらは終わります。
           </div>
         </article>
 
@@ -446,19 +491,19 @@
 
         <article class="log-entry">
           <div class="time">[20:26]</div>
-          <div class="sender">院長室 / 黒崎恒一郎</div>
+          <div class="sender">管理室 / 黒崎恒一郎</div>
           <div class="message">
             正確な情報を出すな。<br>
-            病院が倒れれば、ここにいる全員が路頭に迷います。
+            ここが倒れれば、ここにいる全員が路頭に迷います。
           </div>
         </article>
 
         <article class="log-entry">
           <div class="time">[20:27]</div>
-          <div class="sender">院長室 / 黒崎恒一郎</div>
+          <div class="sender">管理室 / 黒崎恒一郎</div>
           <div class="message">
             遺族対応は「予期せぬ容体変化」。<br>
-            新聞には「個別診療は非開示」。<br>
+            新聞には「個別案件は非開示」。<br>
             それ以外は出さない。
           </div>
         </article>
@@ -470,9 +515,13 @@
             このログは管理者により閲覧制限されました。
           </div>
         </article>
-    
-  <footer class="footer">
-    This page is part of a fictional ARG. All names, organizations, and events are fictional.
+      </section>
+    </section>
+  </main>
+
+  <footer class="fiction-footer">
+    このページは創作作品の演出用に作成された架空の内部ログです。<br>
+    人物・団体・施設・事件はすべてフィクションであり、実在の人物・団体・施設とは関係ありません。人物・施設・風景等の画像はAI生成画像または加工画像を含みます。
   </footer>
 </body>
 </html>
